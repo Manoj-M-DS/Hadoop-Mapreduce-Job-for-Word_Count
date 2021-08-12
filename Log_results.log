@@ -1,0 +1,96 @@
+21/07/20 05:06:56 WARN streaming.StreamJob: -file option is deprecated, please u          se generic option -files instead.
+packageJobJar: [/root/code/mapper.py, /root/code/reducer.py] [/usr/hdp/3.0.1.0-1          87/hadoop-mapreduce/hadoop-streaming-3.1.1.3.0.1.0-187.jar] /tmp/streamjob787126          3396870867621.jar tmpDir=null
+21/07/20 05:06:58 INFO client.RMProxy: Connecting to ResourceManager at sandbox-          hdp.hortonworks.com/172.18.0.2:8050
+21/07/20 05:06:59 INFO client.AHSProxy: Connecting to Application History server           at sandbox-hdp.hortonworks.com/172.18.0.2:10200
+21/07/20 05:06:59 INFO client.RMProxy: Connecting to ResourceManager at sandbox-          hdp.hortonworks.com/172.18.0.2:8050
+21/07/20 05:06:59 INFO client.AHSProxy: Connecting to Application History server           at sandbox-hdp.hortonworks.com/172.18.0.2:10200
+21/07/20 05:06:59 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding f          or path: /user/root/.staging/job_1626701535384_0008
+21/07/20 05:07:00 INFO mapred.FileInputFormat: Total input files to process : 1
+21/07/20 05:07:00 INFO mapreduce.JobSubmitter: number of splits:2
+21/07/20 05:07:02 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_16          26701535384_0008
+21/07/20 05:07:02 INFO mapreduce.JobSubmitter: Executing with tokens: []
+21/07/20 05:07:03 INFO conf.Configuration: found resource resource-types.xml at           file:/etc/hadoop/3.0.1.0-187/0/resource-types.xml
+21/07/20 05:07:03 INFO impl.YarnClientImpl: Submitted application application_16          26701535384_0008
+21/07/20 05:07:03 INFO mapreduce.Job: The url to track the job: http://sandbox-h          dp.hortonworks.com:8088/proxy/application_1626701535384_0008/
+21/07/20 05:07:03 INFO mapreduce.Job: Running job: job_1626701535384_0008
+21/07/20 05:07:21 INFO mapreduce.Job: Job job_1626701535384_0008 running in uber           mode : false
+21/07/20 05:07:21 INFO mapreduce.Job:  map 0% reduce 0%
+21/07/20 05:08:23 INFO mapreduce.Job:  map 50% reduce 0%
+21/07/20 05:08:24 INFO mapreduce.Job: Task Id : attempt_1626701535384_0008_m_000          001_0, Status : FAILED
+[2021-07-20 05:08:03.880]Container [pid=12673,containerID=container_e03_16267015          35384_0008_01_000003] is running 438669312B beyond the 'PHYSICAL' memory limit.           Current usage: 1.4 GB of 1 GB physical memory used; 5.3 GB of 2.1 GB virtual mem          ory used. Killing container.
+Dump of the process-tree for container_e03_1626701535384_0008_01_000003 :
+        |- PID PPID PGRPID SESSID CMD_NAME USER_MODE_TIME(MILLIS) SYSTEM_TIME(MI          LLIS) VMEM_USAGE(BYTES) RSSMEM_USAGE(PAGES) FULL_CMD_LINE
+        |- 12823 12695 12673 12673 (java) 0 0 2813468672 184601 /usr/lib/jvm/jav          a/bin/java -server -XX:NewRatio=8 -Djava.net.preferIPv4Stack=true -Dhdp.version=          3.0.1.0-187 -Xmx1024m -Djava.io.tmpdir=/hadoop/yarn/local/usercache/root/appcach          e/application_1626701535384_0008/container_e03_1626701535384_0008_01_000003/tmp           -Dlog4j.configuration=container-log4j.properties -Dyarn.app.container.log.dir=/h          adoop/yarn/log/application_1626701535384_0008/container_e03_1626701535384_0008_0          1_000003 -Dyarn.app.container.log.filesize=0 -Dhadoop.root.logger=INFO,CLA -Dhad          oop.root.logfile=syslog org.apache.hadoop.mapred.YarnChild 172.18.0.2 46575 atte          mpt_1626701535384_0008_m_000001_0 3298534883331
+        |- 12673 12670 12673 12673 (bash) 1 0 13320192 39 /bin/bash -c /usr/lib/          jvm/java/bin/java -server -XX:NewRatio=8 -Djava.net.preferIPv4Stack=true -Dhdp.v          ersion=3.0.1.0-187 -Xmx1024m -Djava.io.tmpdir=/hadoop/yarn/local/usercache/root/          appcache/application_1626701535384_0008/container_e03_1626701535384_0008_01_0000          03/tmp -Dlog4j.configuration=container-log4j.properties -Dyarn.app.container.log          .dir=/hadoop/yarn/log/application_1626701535384_0008/container_e03_1626701535384          _0008_01_000003 -Dyarn.app.container.log.filesize=0 -Dhadoop.root.logger=INFO,CL          A -Dhadoop.root.logfile=syslog org.apache.hadoop.mapred.YarnChild 172.18.0.2 465          75 attempt_1626701535384_0008_m_000001_0 3298534883331 1>/hadoop/yarn/log/applic          ation_1626701535384_0008/container_e03_1626701535384_0008_01_000003/stdout 2>/ha          doop/yarn/log/application_1626701535384_0008/container_e03_1626701535384_0008_01          _000003/stderr
+        |- 12695 12673 12673 12673 (java) 735 81 2813468672 184601 /usr/lib/jvm/          java/bin/java -server -XX:NewRatio=8 -Djava.net.preferIPv4Stack=true -Dhdp.versi          on=3.0.1.0-187 -Xmx1024m -Djava.io.tmpdir=/hadoop/yarn/local/usercache/root/appc          ache/application_1626701535384_0008/container_e03_1626701535384_0008_01_000003/t          mp -Dlog4j.configuration=container-log4j.properties -Dyarn.app.container.log.dir          =/hadoop/yarn/log/application_1626701535384_0008/container_e03_1626701535384_000          8_01_000003 -Dyarn.app.container.log.filesize=0 -Dhadoop.root.logger=INFO,CLA -D          hadoop.root.logfile=syslog org.apache.hadoop.mapred.YarnChild 172.18.0.2 46575 a          ttempt_1626701535384_0008_m_000001_0 3298534883331
+
+[2021-07-20 05:08:19.701]Container killed on request. Exit code is 143
+[2021-07-20 05:08:19.990]Container exited with a non-zero exit code 143.
+
+21/07/20 05:08:48 INFO mapreduce.Job:  map 100% reduce 0%
+21/07/20 05:08:49 INFO mapreduce.Job:  map 100% reduce 100%
+21/07/20 05:08:52 INFO mapreduce.Job: Job job_1626701535384_0008 completed succe          ssfully
+21/07/20 05:08:53 INFO mapreduce.Job: Counters: 55
+        File System Counters
+                FILE: Number of bytes read=121
+                FILE: Number of bytes written=715039
+                FILE: Number of read operations=0
+                FILE: Number of large read operations=0
+                FILE: Number of write operations=0
+                HDFS: Number of bytes read=357
+                HDFS: Number of bytes written=58
+                HDFS: Number of read operations=11
+                HDFS: Number of large read operations=0
+                HDFS: Number of write operations=2
+        Job Counters
+                Failed map tasks=1
+                Launched map tasks=3
+                Launched reduce tasks=1
+                Other local map tasks=1
+                Data-local map tasks=2
+                Total time spent by all maps in occupied slots (ms)=569728
+                Total time spent by all reduces in occupied slots (ms)=84224
+                Total time spent by all map tasks (ms)=142432
+                Total time spent by all reduce tasks (ms)=21056
+                Total vcore-milliseconds taken by all map tasks=142432
+                Total vcore-milliseconds taken by all reduce tasks=21056
+                Total megabyte-milliseconds taken by all map tasks=145850368
+                Total megabyte-milliseconds taken by all reduce tasks=21561344
+        Map-Reduce Framework
+                Map input records=1
+                Map output records=12
+                Map output bytes=91
+                Map output materialized bytes=127
+                Input split bytes=256
+                Combine input records=0
+                Combine output records=0
+                Reduce input groups=8
+                Reduce shuffle bytes=127
+                Reduce input records=12
+                Reduce output records=8
+                Spilled Records=24
+                Shuffled Maps =2
+                Failed Shuffles=0
+                Merged Map outputs=2
+                GC time elapsed (ms)=555
+                CPU time spent (ms)=4180
+                Physical memory (bytes) snapshot=1745088512
+                Virtual memory (bytes) snapshot=8299294720
+                Total committed heap usage (bytes)=1554513920
+                Peak Map Physical memory (bytes)=1494392832
+                Peak Map Virtual memory (bytes)=5638438912
+                Peak Reduce Physical memory (bytes)=212742144
+                Peak Reduce Virtual memory (bytes)=2638065664
+        Shuffle Errors
+                BAD_ID=0
+                CONNECTION=0
+                IO_ERROR=0
+                WRONG_LENGTH=0
+                WRONG_MAP=0
+                WRONG_REDUCE=0
+        File Input Format Counters
+                Bytes Read=101
+        File Output Format Counters
+                Bytes Written=58
+21/07/20 05:08:53 INFO streaming.StreamJob: Output directory: /user/root/wcoutputnewmanoj
+[
